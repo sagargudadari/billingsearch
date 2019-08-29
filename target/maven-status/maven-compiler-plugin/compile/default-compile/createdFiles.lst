@@ -1,10 +1,8 @@
-com\mastercard\billingsearch\exception\ResourceNotFoundException.class
-com\mastercard\billingsearch\controller\BillingSearchController.class
-com\mastercard\billingsearch\entity\RequestDetails.class
-com\mastercard\billingsearch\repository\SummaryRepository.class
-com\mastercard\billingsearch\model\SummaryRequestParamsModel.class
-com\mastercard\billingsearch\service\SummaryService.class
-com\mastercard\billingsearch\rest\GenericRestClient.class
 com\mastercard\billingsearch\exception\ErrorDetails.class
+com\mastercard\billingsearch\exception\ResourceNotFoundException.class
 com\mastercard\billingsearch\exception\GlobalExceptionHandler.class
 com\mastercard\billingsearch\Application.class
+com\mastercard\billingsearch\model\SummaryModel.class
+com\mastercard\billingsearch\repository\SummaryRepository.class
+com\mastercard\billingsearch\controller\BillingSearchSummaryController.class
+com\mastercard\billingsearch\service\SummaryService.class

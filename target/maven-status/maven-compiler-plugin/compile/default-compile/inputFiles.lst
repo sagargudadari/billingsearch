@@ -1,10 +1,8 @@
-D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\controller\BillingSearchController.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\Application.java
-D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\model\SummaryRequestParamsModel.java
+D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\model\SummaryModel.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\service\SummaryService.java
-D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\rest\GenericRestClient.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\exception\ErrorDetails.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\repository\SummaryRepository.java
-D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\entity\RequestDetails.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\exception\GlobalExceptionHandler.java
+D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\controller\BillingSearchSummaryController.java
 D:\workspace\billingsearch\src\main\java\com\mastercard\billingsearch\exception\ResourceNotFoundException.java
