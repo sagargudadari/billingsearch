@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
@@ -25,7 +24,7 @@ public class BillingSearchSummaryController {
     private SummaryService summaryService;
 
     @PostMapping
-    public List<Map<String, Object>> billingSummary(@Valid @RequestBody SummaryModel summaryModel) {
-        return summaryService.getSummaryData();
+    public List<Object> billingSummary(@Valid @RequestBody SummaryModel summaryModel) {
+        return summaryService.getSummaryData(summaryModel).getContent();
     }
 }
