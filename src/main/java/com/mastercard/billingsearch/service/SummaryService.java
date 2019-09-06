@@ -28,7 +28,7 @@ public class SummaryService {
 
     private String buildPageableQueryString(SummaryModel summaryModel) {
 
-        log.info("Here for making query with data {}", summaryModel);
+        log.info("BuildPageableQueryString with data {} and total record per page want '{}'", summaryModel, total);
 
         String selectClause = "select * from charge_detail cd, charge_transaction_trace ctt"
                 + " where cd.summary_trace_id = ctt.billing_summary_trace_id"
@@ -39,6 +39,8 @@ public class SummaryService {
         String orderClause = " order by invoice_date desc"
                 + " offset nvl(" + summaryModel.getPage() + "-1,1)*" + total
                 + " rows fetch next " + total + " rows only";
+
+        log.info("DB call with pageable query string '{}{}{}'", selectClause, whereClause, orderClause);
 
         return selectClause.concat(whereClause).concat(orderClause);
     }
@@ -60,11 +62,11 @@ public class SummaryService {
         return andClause;
     }
 
-    public void setTotal(int total) {
+    void setTotal(int total) {
         this.total = total;
     }
 
-    public void setSummaryRepository(SummaryRepository summaryRepository) {
+    void setSummaryRepository(SummaryRepository summaryRepository) {
         this.summaryRepository = summaryRepository;
     }
 }

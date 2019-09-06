@@ -19,7 +19,7 @@ public class SummaryRepository {
         return jdbcTemplate.query(sqlQuery, new BeanPropertyRowMapper<>(SummaryResponse.class));
     }
 
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+    void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 }
