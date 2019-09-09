@@ -1,5 +1,6 @@
 package com.mastercard.billingsearch.exception;
 
+import com.mastercard.billingsearch.entity.ErrorDetails;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,13 +18,15 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static com.mastercard.billingsearch.constant.Constant.*;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({Exception.class, IOException.class, DataAccessException.class})
     public final ResponseEntity<ErrorDetails> handleAllExceptions(Exception ex, WebRequest request) {
-        ErrorDetails exceptionResponse = new ErrorDetails(new Date(), ex.getLocalizedMessage(),
-                request.getDescription(false));
+        ErrorDetails exceptionResponse = new ErrorDetails(SERVER_ERROR, CHECK_LOGS_ROOT_CAUSE,
+                new Date());
         return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
@@ -31,14 +34,19 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers,
                                                                   HttpStatus status, WebRequest request) {
-        Map<String, Object> body = new LinkedHashMap<>();
-        body.put("status", status.value());
-
         Map<String, String> fieldErrors = ex.getBindingResult().getFieldErrors().stream()
                 .collect(Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage));
 
-        body.put("errors", fieldErrors);
-        body.put("timestamp", new Date());
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put(MESSAGE, VALIDATION_FAILED);
+        body.put(ERRORS, fieldErrors);
+        body.put(TIMESTAMP, new Date());
         return new ResponseEntity<>(body, headers, status);
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public final ResponseEntity<ErrorDetails> handleUserNotFoundException(ResourceNotFoundException ex, WebRequest request) {
+        ErrorDetails errorDetails = new ErrorDetails(RECORD_NOT_FOUND, ex.getMessage(), new Date());
+        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 }

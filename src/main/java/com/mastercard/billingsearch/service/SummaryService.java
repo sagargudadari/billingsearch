@@ -1,6 +1,7 @@
 package com.mastercard.billingsearch.service;
 
 import com.mastercard.billingsearch.entity.SummaryResponse;
+import com.mastercard.billingsearch.exception.ResourceNotFoundException;
 import com.mastercard.billingsearch.model.SummaryModel;
 import com.mastercard.billingsearch.repository.SummaryRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Predicate;
+
+import static com.mastercard.billingsearch.constant.Constant.RECORD_NOT_FOUND;
+import static com.mastercard.billingsearch.constant.Constant.RECORD_NOT_FOUND_MSG;
 
 @Slf4j
 @Service
@@ -22,8 +27,16 @@ public class SummaryService {
     @Value("${page.per.records}")
     private Integer total;
 
-    public List<SummaryResponse> getSummaryData(SummaryModel summaryModel) {
-        return summaryRepository.findPageableRecords(buildPageableQueryString(summaryModel));
+    public List<SummaryResponse> getSummaryData(SummaryModel summaryModel) throws ResourceNotFoundException {
+
+        Optional<List<SummaryResponse>> summaryResponses = Optional.ofNullable(
+                summaryRepository.findPageableRecords(buildPageableQueryString(summaryModel)));
+
+        if(summaryResponses.get().isEmpty()) {
+            log.info("{} : {}/query above.", RECORD_NOT_FOUND, RECORD_NOT_FOUND_MSG);
+            throw new ResourceNotFoundException(RECORD_NOT_FOUND_MSG + summaryModel);
+        }
+        return summaryResponses.get();
     }
 
     private String buildPageableQueryString(SummaryModel summaryModel) {

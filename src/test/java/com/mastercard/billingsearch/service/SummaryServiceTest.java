@@ -1,6 +1,7 @@
 package com.mastercard.billingsearch.service;
 
 import com.mastercard.billingsearch.entity.SummaryResponse;
+import com.mastercard.billingsearch.exception.ResourceNotFoundException;
 import com.mastercard.billingsearch.model.SummaryModel;
 import com.mastercard.billingsearch.repository.SummaryRepository;
 import org.junit.Before;
@@ -34,7 +35,7 @@ public class SummaryServiceTest {
     }
 
     @Test
-    public void getSummaryDataTest() {
+    public void getSummaryDataTest() throws ResourceNotFoundException {
 
         SummaryModel summaryModel = SummaryModel.builder().invoiceDate("2019-12-1").page(1).build();
 
@@ -47,7 +48,7 @@ public class SummaryServiceTest {
     }
 
     @Test
-    public void getSummaryDataWithAndConditionTest() {
+    public void getSummaryDataWithAndConditionTest() throws ResourceNotFoundException {
 
         SummaryModel summaryModel = SummaryModel.builder()
                 .invoiceDate("2019-12-1")
