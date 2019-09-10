@@ -1,6 +1,7 @@
 package com.mastercard.billingsearch.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,16 +11,22 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.mastercard.billingsearch.constant.Constant.CORRELATION_ID;
+
 @Component
 @Slf4j
 public class LoggingServiceImpl implements LoggingService {
 
     @Override
     public void logRequest(HttpServletRequest httpServletRequest, Object body) {
+
+        MDC.put(CORRELATION_ID, httpServletRequest.getHeader(CORRELATION_ID));
+
         StringBuilder stringBuilder = new StringBuilder();
         Map<String, String> parameters = buildParametersMap(httpServletRequest);
 
         stringBuilder.append("Incoming Request : ");
+        stringBuilder.append("correlation-id=[").append(httpServletRequest.getHeader(CORRELATION_ID)).append("] ");
         stringBuilder.append("method=[").append(httpServletRequest.getMethod()).append("] ");
         stringBuilder.append("path=[").append(httpServletRequest.getRequestURI()).append("] ");
 
@@ -37,12 +44,13 @@ public class LoggingServiceImpl implements LoggingService {
     @Override
     public void logResponse(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object body) {
         StringBuilder stringBuilder = new StringBuilder();
-
         stringBuilder.append("Outgoing Response : ");
+        stringBuilder.append("correlation-id=[").append(httpServletRequest.getHeader(CORRELATION_ID)).append("] ");
         stringBuilder.append("responseBody=[").append(body).append("] ");
         stringBuilder.append("responseHeaders=[").append(buildHeadersMap(httpServletResponse)).append("] ");
 
         log.info(stringBuilder.toString());
+        MDC.clear();
     }
 
     private Map<String, String> buildParametersMap(HttpServletRequest httpServletRequest) {

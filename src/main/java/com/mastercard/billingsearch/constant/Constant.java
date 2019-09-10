@@ -12,5 +12,6 @@ public final class Constant {
     public static final String ERRORS = "errors";
     public static final String TIMESTAMP = "timestamp";
 
+    public static final String CORRELATION_ID = "correlation-id";
 
 }
