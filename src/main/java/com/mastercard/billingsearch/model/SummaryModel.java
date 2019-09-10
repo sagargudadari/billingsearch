@@ -20,6 +20,5 @@ public class SummaryModel {
     private String feederType;
     @Min(1)
     private int page;
-
 }
 

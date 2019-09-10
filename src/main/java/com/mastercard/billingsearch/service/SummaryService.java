@@ -39,13 +39,28 @@ public class SummaryService {
         return summaryResponses.get();
     }
 
+    public List<String> getInvoiceDates() {
+        log.info("Get the list of InvoiceDate");
+        return summaryRepository.findAllInvoiceDate();
+    }
+
+    public List<String> getActivityIcas() {
+        log.info("Get the list of ActivityICA");
+        return summaryRepository.findAllActivityICA();
+    }
+
+    public List<String> getFeederTypes() {
+        log.info("Get the list of FeederType");
+        return summaryRepository.findAllFeederType();
+    }
+
     private String buildPageableQueryString(SummaryModel summaryModel) {
 
         log.info("BuildPageableQueryString with data {} and total record per page want '{}'", summaryModel, total);
 
         String selectClause = "select * from charge_detail cd, charge_transaction_trace ctt"
                 + " where cd.summary_trace_id = ctt.billing_summary_trace_id"
-                + " and cd.invoice_date <= to_date('" + summaryModel.getInvoiceDate() + "', 'yyyy/mm/dd')";
+                + " and cd.invoice_date <= to_date('" + summaryModel.getInvoiceDate() + "', 'MM-DD-YYYY')";
 
         String whereClause = buildAndClauseString(summaryModel);
 
