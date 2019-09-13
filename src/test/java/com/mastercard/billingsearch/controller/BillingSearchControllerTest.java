@@ -37,7 +37,7 @@ public class BillingSearchControllerTest {
 
     @Test
     public void verifyInvoiceDateSuccessTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/billing/invoice-dates")
+        mockMvc.perform(MockMvcRequestBuilders.get("/billing/search/invoice-dates")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.*").isArray())
@@ -46,7 +46,7 @@ public class BillingSearchControllerTest {
 
     @Test
     public void verifyActivityIcaSuccessTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/billing/activity-icas")
+        mockMvc.perform(MockMvcRequestBuilders.get("/billing/search/activity-icas")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.*").isArray())
@@ -55,7 +55,7 @@ public class BillingSearchControllerTest {
 
     @Test
     public void verifyFeederTypeSuccessTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/billing/feeder-systems")
+        mockMvc.perform(MockMvcRequestBuilders.get("/billing/search/feeder-systems")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.*").isArray())

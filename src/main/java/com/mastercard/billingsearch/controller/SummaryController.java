@@ -18,7 +18,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/billing/summary")
+@RequestMapping("/billing/search/summary")
 @Api("Billing Search API endpoints for retrieving, downloading invoice and transaction details from system.")
 public class SummaryController {
 

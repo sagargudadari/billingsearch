@@ -38,7 +38,7 @@ public class SummaryControllerTest {
 
     @Test
     public void verifyBillingSummarySuccessTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
+        mockMvc.perform(MockMvcRequestBuilders.post("/billing/search/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"invoiceDate\":\"12/1/2020\",\n" +
@@ -57,7 +57,7 @@ public class SummaryControllerTest {
 
     @Test
     public void verifyBillingSummaryWithMandatoryAttributeTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
+        mockMvc.perform(MockMvcRequestBuilders.post("/billing/search/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"invoiceDate\" : \"12/1/2020\", \"page\" : \"1\" }")
                 .accept(MediaType.APPLICATION_JSON))
@@ -71,7 +71,7 @@ public class SummaryControllerTest {
 
     @Test
     public void verifyBillingSummaryValidationFailureTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
+        mockMvc.perform(MockMvcRequestBuilders.post("/billing/search/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"billingEvent\":\"dasdas\",\n" +
@@ -87,7 +87,7 @@ public class SummaryControllerTest {
 
     @Test
     public void verifyBillingSummaryRecordNotFoundTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
+        mockMvc.perform(MockMvcRequestBuilders.post("/billing/search/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"invoiceDate\":\"12/12/2020\",\n" +
@@ -104,7 +104,7 @@ public class SummaryControllerTest {
 
     @Test
     public void verifyBillingSummaryInternalServerTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
+        mockMvc.perform(MockMvcRequestBuilders.post("/billing/search/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"invoiceDate\":\"20-12-1\",\n" +

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/billing")
+@RequestMapping("/billing/search")
 @Api("Billing Search API endpoints for retrieving invoiceDate, activityIca, feederType details from system.")
 public class BillingSearchController {
 
