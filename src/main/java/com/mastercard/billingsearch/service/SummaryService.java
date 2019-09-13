@@ -40,17 +40,17 @@ public class SummaryService {
     }
 
     public List<String> getInvoiceDates() {
-        log.info("Get the list of InvoiceDate");
+        log.info("DB call to get all InvoiceDates");
         return summaryRepository.findAllInvoiceDate();
     }
 
     public List<String> getActivityIcas() {
-        log.info("Get the list of ActivityICA");
+        log.info("DB call to get all ActivityICA");
         return summaryRepository.findAllActivityICA();
     }
 
     public List<String> getFeederTypes() {
-        log.info("Get the list of FeederType");
+        log.info("DB call to get all FeederTypes");
         return summaryRepository.findAllFeederType();
     }
 

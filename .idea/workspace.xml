@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa52d25e-d35f-486e-965f-1f705e1680db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/BillingSearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/SummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/SummaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/repository/SummaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/repository/SummaryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,35 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="54" column="32" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="54" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/BillingSearchController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="147">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,28 +85,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/interceptor/LogInterceptor.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/service/SummaryServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java" />
         <option value="$USER_HOME$/.m2/settings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/exception/ErrorDetails.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/constant/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/Swagger2Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/exception/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/entity/ErrorDetails.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-local.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/SummaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/BillingSearchController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/repository/SummaryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -177,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -350,6 +325,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,10 +356,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Maven.billingsearch [clean,install...]">
-    <configuration name="All in billingsearch (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillingSearchControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billingsearch" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mastercard.billingsearch.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mastercard.billingsearch.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.mastercard.billingsearch.controller.BillingSearchControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -418,6 +401,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SummaryRepositoryTest.findPageableRecordsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billingsearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mastercard.billingsearch.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mastercard.billingsearch.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.mastercard.billingsearch.repository.SummaryRepositoryTest" />
+      <option name="METHOD_NAME" value="findPageableRecordsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SummaryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billingsearch" />
       <extension name="coverage">
@@ -429,22 +428,6 @@
       <option name="PACKAGE_NAME" value="com.mastercard.billingsearch.service" />
       <option name="MAIN_CLASS_NAME" value="com.mastercard.billingsearch.service.SummaryServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SummaryServiceTest.getSummaryDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="billingsearch" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mastercard.billingsearch.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mastercard.billingsearch.service" />
-      <option name="MAIN_CLASS_NAME" value="com.mastercard.billingsearch.service.SummaryServiceTest" />
-      <option name="METHOD_NAME" value="getSummaryDataTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -530,22 +513,22 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SummaryServiceTest.getSummaryDataTest" />
       <item itemvalue="JUnit.SummaryServiceTest" />
-      <item itemvalue="JUnit.All in billingsearch (1)" />
       <item itemvalue="JUnit.SummaryRepositoryTest" />
       <item itemvalue="JUnit.SummaryControllerTest" />
       <item itemvalue="Maven.billingsearch [clean,install...]" />
       <item itemvalue="Maven.billingsearch [clean,verify]" />
       <item itemvalue="Maven.billingsearch [spring-boot:run]" />
+      <item itemvalue="JUnit.BillingSearchControllerTest" />
+      <item itemvalue="JUnit.SummaryRepositoryTest.findPageableRecordsTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SummaryServiceTest" />
-        <item itemvalue="JUnit.SummaryControllerTest" />
         <item itemvalue="JUnit.SummaryRepositoryTest" />
-        <item itemvalue="JUnit.All in billingsearch (1)" />
-        <item itemvalue="JUnit.SummaryServiceTest.getSummaryDataTest" />
+        <item itemvalue="JUnit.SummaryRepositoryTest.findPageableRecordsTest" />
+        <item itemvalue="JUnit.BillingSearchControllerTest" />
+        <item itemvalue="JUnit.SummaryControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -563,42 +546,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SummaryServiceTest_getSummaryDataTest - 2019.09.06 at 11h 05m 11s.xml">
-      <configuration name="SummaryServiceTest.getSummaryDataTest" configurationId="JUnit" />
+    <history-entry file="BillingSearchControllerTest - 2019.09.13 at 10h 23m 37s.xml">
+      <configuration name="BillingSearchControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryServiceTest - 2019.09.06 at 11h 08m 59s.xml">
-      <configuration name="SummaryServiceTest" configurationId="JUnit" />
+    <history-entry file="BillingSearchControllerTest - 2019.09.13 at 14h 49m 49s.xml">
+      <configuration name="BillingSearchControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryServiceTest - 2019.09.06 at 11h 11m 39s.xml">
-      <configuration name="SummaryServiceTest" configurationId="JUnit" />
+    <history-entry file="BillingSearchControllerTest - 2019.09.13 at 14h 59m 43s.xml">
+      <configuration name="BillingSearchControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryServiceTest - 2019.09.06 at 11h 18m 56s.xml">
-      <configuration name="SummaryServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_billingsearch_(1) - 2019.09.06 at 11h 26m 09s.xml">
-      <configuration name="All in billingsearch (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SummaryRepositoryTest - 2019.09.06 at 11h 35m 39s.xml">
+    <history-entry file="SummaryRepositoryTest - 2019.09.13 at 15h 13m 26s.xml">
       <configuration name="SummaryRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryControllerTest - 2019.09.09 at 12h 45m 34s.xml">
-      <configuration name="SummaryControllerTest" configurationId="JUnit" />
+    <history-entry file="SummaryRepositoryTest - 2019.09.13 at 15h 15m 33s.xml">
+      <configuration name="SummaryRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryControllerTest - 2019.09.09 at 12h 47m 24s.xml">
-      <configuration name="SummaryControllerTest" configurationId="JUnit" />
+    <history-entry file="SummaryRepositoryTest_findPageableRecordsTest - 2019.09.13 at 15h 23m 00s.xml">
+      <configuration name="SummaryRepositoryTest.findPageableRecordsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryControllerTest - 2019.09.09 at 12h 48m 25s.xml">
-      <configuration name="SummaryControllerTest" configurationId="JUnit" />
+    <history-entry file="SummaryRepositoryTest - 2019.09.13 at 15h 26m 17s.xml">
+      <configuration name="SummaryRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SummaryServiceTest - 2019.09.09 at 16h 31m 48s.xml">
+    <history-entry file="SummaryServiceTest - 2019.09.13 at 15h 32m 06s.xml">
+      <configuration name="SummaryServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SummaryServiceTest - 2019.09.13 at 15h 33m 15s.xml">
+      <configuration name="SummaryServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SummaryServiceTest - 2019.09.13 at 15h 36m 58s.xml">
       <configuration name="SummaryServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -616,7 +599,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -643,20 +626,6 @@
     <SUITE FILE_PATH="coverage/billingsearch$All_in_billingsearch.ic" NAME="All in billingsearch Coverage Results" MODIFIED="1567692162159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21.jar!/javax/servlet/ServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.1.6.RELEASE/spring-boot-starter-web-2.1.6.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -780,26 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -844,16 +793,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/Swagger2Config.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -885,40 +825,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/constant/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,41 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.1.8.RELEASE/spring-jdbc-5.1.8.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="239" column="23" selection-start-line="239" selection-start-column="23" selection-end-line="239" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/SummaryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -974,37 +853,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/SummaryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/soft/jdk8/.rsrc/1033/JAVA_CAB10/tools/jre/lib/rt.jar!/java/util/Date.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3866">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
+          <folding>
+            <element signature="e#2602#2603#0" expanded="true" />
+            <element signature="e#2635#2636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/model/SummaryModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="68">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/repository/SummaryRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.1.8.RELEASE/spring-jdbc-5.1.8.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="258" column="35" selection-start-line="258" selection-start-column="23" selection-end-line="258" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/SummaryControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="54" column="32" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="54" selection-end-column="32" />
+        <state relative-caret-position="39">
+          <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1013,18 +934,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/controller/BillingSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="192">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/controller/BillingSearchControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/repository/SummaryRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="183">
+          <caret line="43" column="106" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/repository/SummaryRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/soft/jdk8/.rsrc/1033/JAVA_CAB10/tools/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3621">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/SummaryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mastercard/billingsearch/service/SummaryServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="105" column="27" lean-forward="true" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/service/LoggingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mastercard/billingsearch/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

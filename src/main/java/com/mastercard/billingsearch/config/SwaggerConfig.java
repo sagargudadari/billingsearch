@@ -21,8 +21,8 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.mastercard.billingsearch"))
                 .paths(PathSelectors.ant("/billing/*"))
-                .build()
-                .apiInfo(apiInfo());
+                .build();
+                //.apiInfo(apiInfo());
     }
 
     private ApiInfo apiInfo() {

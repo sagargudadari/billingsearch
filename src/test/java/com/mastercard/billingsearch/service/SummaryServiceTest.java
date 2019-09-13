@@ -67,6 +67,58 @@ public class SummaryServiceTest {
         verify(summaryRepository, atLeastOnce()).findPageableRecords(anyString());
     }
 
+    @Test
+    public void getInvoiceDatesTest() {
+
+        when(summaryRepository.findAllInvoiceDate()).thenReturn(getDummyInvoiceDateResponse());
+
+        List<String> summaryResponses = summaryService.getInvoiceDates();
+
+        assertEquals(2, summaryResponses.size());
+        verify(summaryRepository, atLeastOnce()).findAllInvoiceDate();
+    }
+
+    @Test
+    public void getActivityIcasTest() {
+
+        when(summaryRepository.findAllActivityICA()).thenReturn(getDummyActivityIcaResponse());
+
+        List<String> summaryResponses = summaryService.getActivityIcas();
+
+        assertEquals(1, summaryResponses.size());
+        verify(summaryRepository, atLeastOnce()).findAllActivityICA();
+    }
+
+    @Test
+    public void getFeederTypesTest() {
+
+        when(summaryRepository.findAllFeederType()).thenReturn(getDummyFeederTypeResponse());
+
+        List<String> summaryResponses = summaryService.getFeederTypes();
+
+        assertEquals(1, summaryResponses.size());
+        verify(summaryRepository, atLeastOnce()).findAllFeederType();
+    }
+
+    private List<String> getDummyFeederTypeResponse() {
+        List<String> activityIca = new ArrayList<>();
+        activityIca.add("AUTH");
+        return activityIca;
+    }
+
+    private List<String> getDummyActivityIcaResponse() {
+        List<String> activityIca = new ArrayList<>();
+        activityIca.add("ABC");
+        return activityIca;
+    }
+
+    private List<String> getDummyInvoiceDateResponse() {
+        List<String> invoiceDates = new ArrayList<>();
+        invoiceDates.add("1/1/2019");
+        invoiceDates.add("2/1/2019");
+        return invoiceDates;
+    }
+
     private List<SummaryResponse> getDummySummaryResponse() {
         List<SummaryResponse> summaryResponses = new ArrayList<>();
         SummaryResponse summaryResponse = new SummaryResponse();

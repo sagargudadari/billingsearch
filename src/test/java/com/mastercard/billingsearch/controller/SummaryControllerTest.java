@@ -41,7 +41,7 @@ public class SummaryControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
-                        "\t\"invoiceDate\":\"2020-12-1\",\n" +
+                        "\t\"invoiceDate\":\"12/1/2020\",\n" +
                         "\t\"page\":\"1\",\n" +
                         "\t\"billingEvent\":\"dasdas\",\n" +
                         "\t\"feederType\" : \"Ravi\"\n" +
@@ -59,7 +59,7 @@ public class SummaryControllerTest {
     public void verifyBillingSummaryWithMandatoryAttributeTest() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"invoiceDate\" : \"2020-12-1\", \"page\" : \"1\" }")
+                .content("{\"invoiceDate\" : \"12/1/2020\", \"page\" : \"1\" }")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[0].summaryTraceId").exists())
                 .andExpect(jsonPath("$.[0].invoiceDate").exists())
@@ -90,7 +90,7 @@ public class SummaryControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.post("/billing/summary")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
-                        "\t\"invoiceDate\":\"2020-12-1\",\n" +
+                        "\t\"invoiceDate\":\"12/12/2020\",\n" +
                         "\t\"page\":\"10\",\n" +
                         "\t\"billingEvent\":\"dasdas\",\n" +
                         "\t\"feederType\" : \"Ravi\"\n" +
