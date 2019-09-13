@@ -19,6 +19,7 @@ import org.springframework.web.context.WebApplicationContext;
 import static com.mastercard.billingsearch.constant.Constant.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Application.class)
@@ -117,6 +118,20 @@ public class SummaryControllerTest {
                 .andExpect(jsonPath("$.errors").exists())
                 .andExpect(jsonPath("$.timestamp").exists())
                 .andDo(print());
+    }
+
+    @Test
+    public void billingSummaryDownloadTest() throws Exception {
+        mockMvc.perform(
+                MockMvcRequestBuilders.post("/billing/search/summary/download")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\r\n" + "	\"invoiceDate\":\"2019-08-29\",\r\n"
+                                + "	\"billEventId\":\"BILLEVNTID1\",\r\n" + "	\"invoiceNumber\":\"INVNUM1\",\r\n"
+                                + "	\"activityICA\":\"ICA1\",\r\n" + "	\"feederType\":\"AUTH\"\r\n" + "	\r\n"
+                                + "	\r\n" + "}")
+                        .accept(MediaType.APPLICATION_JSON).header("userId", "mohit"))
+                .andExpect(status().isOk());
+
     }
 
 }

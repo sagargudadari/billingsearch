@@ -20,7 +20,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.mastercard.billingsearch"))
-                .paths(PathSelectors.ant("/billing/*"))
+                .paths(PathSelectors.any())
                 .build();
                 //.apiInfo(apiInfo());
     }

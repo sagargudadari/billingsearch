@@ -4,6 +4,7 @@ import com.mastercard.billingsearch.entity.SummaryResponse;
 import com.mastercard.billingsearch.exception.ResourceNotFoundException;
 import com.mastercard.billingsearch.model.SummaryModel;
 import com.mastercard.billingsearch.repository.SummaryRepository;
+import com.mastercard.billingsearch.service.impl.SummaryServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -20,18 +21,16 @@ import static org.mockito.Mockito.*;
 public class SummaryServiceTest {
 
     @InjectMocks
-    SummaryService summaryService;
+    SummaryServiceImpl summaryService;
 
     @Mock
     SummaryRepository summaryRepository;
 
     @Before
     public void init() {
-
         MockitoAnnotations.initMocks(this);
         summaryService.setTotal(1);
         summaryService.setSummaryRepository(summaryRepository);
-
     }
 
     @Test

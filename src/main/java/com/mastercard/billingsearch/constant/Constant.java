@@ -2,7 +2,11 @@ package com.mastercard.billingsearch.constant;
 
 public final class Constant {
 
-    //Exception constants
+    private Constant() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    //Exceptions
     public static final String RECORD_NOT_FOUND_MSG = "No summary records/data found with this details : ";
     public static final String VALIDATION_FAILED = "Validation Failed";
     public static final String SERVER_ERROR = "Server Error";
@@ -12,6 +16,14 @@ public final class Constant {
     public static final String ERRORS = "errors";
     public static final String TIMESTAMP = "timestamp";
 
+    // headers
     public static final String CORRELATION_ID = "correlation-id";
+
+    public static final String SUCCESS_STR = "success";
+    public static final String BILLING_EVENT_DETAIL = "_BILLING_EVENT_DETAIL EVENT";
+    public static final String TRANSACTION_DETAIL = "_TRANSACTION_DETAIL TRANSACTION";
+    public static final String COMMA = ",";
+    public static final String AS = " AS ";
+
 
 }

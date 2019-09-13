@@ -1,5 +1,6 @@
-package com.mastercard.billingsearch.service;
+package com.mastercard.billingsearch.service.impl;
 
+import com.mastercard.billingsearch.service.LoggingService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
