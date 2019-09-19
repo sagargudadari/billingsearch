@@ -1,16 +1,21 @@
 package com.mastercard.billingsearch.controller;
 
-import com.mastercard.billingsearch.service.SummaryService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.mastercard.billingsearch.model.SearchFields;
+import com.mastercard.billingsearch.service.SummaryService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/billing/search")
@@ -21,20 +26,15 @@ public class BillingSearchController {
     private SummaryService summaryService;
 
     @GetMapping(value = "invoice-dates", produces = "application/json")
-    @ApiOperation("Returns only list of Invoice date details from the system.")
-    public ResponseEntity<List<String>> invoiceDate() {
+    @ApiOperation("Returns list of Invoice date details from the system.")
+    public ResponseEntity<List<String>> invoiceDate(@RequestHeader("correlationId") String correlationId,@RequestParam("invoiceICA")String invoiceICA) {
         return new ResponseEntity<>(summaryService.getInvoiceDates(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "activity-icas", produces = "application/json")
-    @ApiOperation("Returns only list of activityICA details from the system.")
-    public ResponseEntity<List<String>> activityICA() {
-        return new ResponseEntity<>(summaryService.getActivityIcas(), HttpStatus.OK);
+    @GetMapping(value = "search-fields", produces = "application/json")
+    @ApiOperation("Returns list of search fields from the system.")
+    public ResponseEntity<SearchFields> searchFields(@RequestHeader("correlationId") String correlationId,@RequestParam("invoiceICA")String invoiceICA,@RequestParam("invoiceDate")String invoiceDate) {
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
-    @GetMapping(value = "feeder-systems", produces = "application/json")
-    @ApiOperation("Returns only list of feeder-systems details from the system.")
-    public ResponseEntity<List<String>> feederType() {
-        return new ResponseEntity<>(summaryService.getFeederTypes(), HttpStatus.OK);
-    }
 }

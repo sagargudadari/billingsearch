@@ -43,7 +43,8 @@ public class SummaryController {
             @ApiResponse(code = 500, message = "Internal Server Error", response = ErrorDetails.class )
     })
     public ResponseEntity<List<SummaryResponse>> billingSummary(
-            @Valid @RequestBody SummaryModel summaryModel) throws ResourceNotFoundException {
+            @Valid @RequestBody SummaryModel summaryModel,@RequestHeader("correlationId") String correlationId,@RequestHeader("userId") String userId,
+            @RequestHeader("roleName") String roleName) throws ResourceNotFoundException {
         return new ResponseEntity<>(summaryService.getSummaryData(summaryModel), HttpStatus.OK);
     }
 
@@ -55,7 +56,9 @@ public class SummaryController {
     @PostMapping(value = "/download")
     @ApiOperation("Returns csv file contains list of Summary/Invoice details from the system.")
     public ResponseEntity<Object> billingSummaryDownload(@RequestBody CSVRequest csvRequest,
+    													@RequestHeader("correlationId") String correlationId,
                                                          @RequestHeader("userId") String userId,
+                                                         @RequestHeader("roleName") String roleName,
                                                          HttpServletResponse response)
             throws CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
 
