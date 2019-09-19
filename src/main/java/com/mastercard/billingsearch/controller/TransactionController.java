@@ -32,7 +32,12 @@ public class TransactionController {
 	 * @return billing Transaction Details
 	 */
 	@GetMapping(value = "{imeTraceId}")
-	@ApiOperation("Returns list of billing transaction details from the system.")
+	@ApiOperation("Returns list of billing transaction details from the system using the dynamic fields configured for the user in the asFields column in the Data Base.There is no fixed response model for this endpoint as it is dynamic based on roles of the user")
+	@ApiResponses(value = {
+			@ApiResponse(code = 400, message = "Bad request", response = ErrorDetails.class),
+			@ApiResponse(code = 404, message = "Record Not Found", response = ErrorDetails.class),
+			@ApiResponse(code = 500, message = "Internal Server Error", response = ErrorDetails.class )
+	})
 	public ResponseEntity<Object> billingTransactionDetail(@PathVariable("imeTraceId") String imeTraceId,
 														   @RequestParam("feederType") String feederType,
 														   @RequestHeader("userId") String userId) {
@@ -47,6 +52,11 @@ public class TransactionController {
 	 */
 	@GetMapping(value = "{imeTraceId}/download")
 	@ApiOperation("Returns csv file contains list of billing transaction details from the system.")
+	@ApiResponses(value = {
+			@ApiResponse(code = 400, message = "Bad request", response = ErrorDetails.class),
+			@ApiResponse(code = 404, message = "Record Not Found", response = ErrorDetails.class),
+			@ApiResponse(code = 500, message = "Internal Server Error", response = ErrorDetails.class )
+	})
 	public ResponseEntity<String> billingDetailsDownload(@PathVariable("imeTraceId") String imeTraceId,
 														 @RequestParam("feederType") String feederType,
 														 @RequestHeader("userId") String userId,
