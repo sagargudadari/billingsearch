@@ -8,13 +8,13 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:application.properties")
 public class RootConfiguration {
 	
-	@Value("${url.exportablerecords}")
+	//@Value("${url.exportablerecords}")
 	private String roleApiUrl;
 	
-	@Value("${json.validator.file}")
+	//@Value("${json.validator.file}")
 	private String schemaFile;
 	
-	@Value("${message}")
+	//@Value("${message}")
 	private String message;
 	
 	@Value("${billingsummaryfile}")

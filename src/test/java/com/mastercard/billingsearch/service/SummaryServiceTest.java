@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
@@ -68,13 +69,14 @@ public class SummaryServiceTest {
 
     @Test
     public void getInvoiceDatesTest() {
+        String activityICA="18373";
 
-        when(summaryRepository.findAllInvoiceDate()).thenReturn(getDummyInvoiceDateResponse());
+        when(summaryRepository.findAllInvoiceDate(Mockito.anyString())).thenReturn(getDummyInvoiceDateResponse());
 
-        List<String> summaryResponses = summaryService.getInvoiceDates();
+        List<String> summaryResponses = summaryService.getInvoiceDates(activityICA);
 
         assertEquals(2, summaryResponses.size());
-        verify(summaryRepository, atLeastOnce()).findAllInvoiceDate();
+        verify(summaryRepository, atLeastOnce()).findAllInvoiceDate(activityICA);
     }
 
     @Test

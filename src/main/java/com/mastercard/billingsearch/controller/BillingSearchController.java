@@ -27,14 +27,14 @@ public class BillingSearchController {
 
     @GetMapping(value = "invoice-dates", produces = "application/json")
     @ApiOperation("Returns list of Invoice date details from the system.")
-    public ResponseEntity<List<String>> invoiceDate(@RequestHeader("correlationId") String correlationId,@RequestParam("invoiceICA")String invoiceICA) {
-        return new ResponseEntity<>(summaryService.getInvoiceDates(), HttpStatus.OK);
+    public ResponseEntity<List<String>> invoiceDate(@RequestHeader("correlationId") String correlationId,@RequestParam("activityICA")String activityICA) {
+        return new ResponseEntity<>(summaryService.getInvoiceDates(activityICA), HttpStatus.OK);
     }
 
     @GetMapping(value = "search-fields", produces = "application/json")
     @ApiOperation("Returns list of search fields from the system.")
-    public ResponseEntity<SearchFields> searchFields(@RequestHeader("correlationId") String correlationId,@RequestParam("invoiceICA")String invoiceICA,@RequestParam("invoiceDate")String invoiceDate) {
-        return new ResponseEntity<>(null, HttpStatus.OK);
+    public ResponseEntity<List<SearchFields>> searchFields(@RequestHeader("correlationId") String correlationId,@RequestParam("invoiceDate")String invoiceDate) {
+    	return new ResponseEntity<>(summaryService.getSearchFields(invoiceDate), HttpStatus.OK);
     }
 
 }

@@ -4,6 +4,7 @@ import com.mastercard.billingsearch.entity.SummaryResponse;
 import com.mastercard.billingsearch.exception.ResourceNotFoundException;
 import com.mastercard.billingsearch.model.CSVRequest;
 import com.mastercard.billingsearch.model.CSVResponse;
+import com.mastercard.billingsearch.model.SearchFields;
 import com.mastercard.billingsearch.model.SummaryModel;
 import com.mastercard.billingsearch.repository.SummaryRepository;
 import com.mastercard.billingsearch.service.SummaryService;
@@ -46,9 +47,9 @@ public class SummaryServiceImpl implements SummaryService {
 		return summaryResponses.get();
 	}
 
-	public List<String> getInvoiceDates() {
+	public List<String> getInvoiceDates(String activityICA) {
 		log.info("DB call to get all InvoiceDates");
-		return summaryRepository.findAllInvoiceDate();
+		return summaryRepository.findAllInvoiceDate(activityICA);
 	}
 
 	public List<String> getActivityIcas() {
@@ -117,5 +118,11 @@ public class SummaryServiceImpl implements SummaryService {
 
 	public void setSummaryRepository(SummaryRepository summaryRepository) {
 		this.summaryRepository = summaryRepository;
+	}
+
+	@Override
+	public List<SearchFields> getSearchFields(String invoiceDate) {
+		
+		return summaryRepository.getSearchFields(invoiceDate);
 	}
 }

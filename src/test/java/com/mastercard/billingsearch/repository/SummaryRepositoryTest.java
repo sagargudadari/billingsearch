@@ -47,10 +47,10 @@ public class SummaryRepositoryTest {
     @Test
     public void findAllInvoiceDateTest() {
         String sqlQuery = "select distinct to_char(invoice_date, 'MM/DD/YYYY') from charge_detail where invoice_date between add_months(trunc(sysdate, 'month'), -12) and trunc(sysdate, 'month') order by to_char(invoice_date, 'MM/DD/YYYY') desc";
-
+        String activityICA="18373";
         when(jdbcTemplate.queryForList(anyString(), (Class<Object>) any())).thenReturn(new ArrayList<>());
 
-        summaryRepository.findAllInvoiceDate();
+        summaryRepository.findAllInvoiceDate(activityICA);
 
         verify(jdbcTemplate, atLeastOnce()).queryForList((String) acQuery.capture(), (Class<Object>) any());
         Assert.assertThat(acQuery.getValue(), equalTo(sqlQuery));
